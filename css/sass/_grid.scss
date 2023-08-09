@@ -1,0 +1,124 @@
+// Variaveis do grid
+$cols: 12;
+$gutter: 20px;
+$device_large: 1200px;
+$device_medium: 760px;
+$device_small: 480px;
+
+// Box-sizing
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+// Mixin de media-queries
+@mixin device($size) {
+	@if $size == desktop {
+		@media screen and (min-width: #{$device_large}) {
+			@content;
+		}
+	}
+    @else if $size == tablet {
+        @media screen and (min-width: #{$device_medium}) and (max-width: #{$device_large - 1}) {
+			@content;
+		}
+    }
+    @else if $size == mobile {
+        @media screen and (max-width: #{$device_medium - 1}) {
+			@content;
+		}
+    }
+}
+
+// Função do grid
+@function grid($col, $offset: false){
+    $width: percentage(calc($col / $cols));
+    $result: calc(#{$width} - #{$gutter});
+    @if $offset == offset {
+		$gutter: calc($gutter / 2);
+		$result: calc(#{$width} + #{$gutter});
+	}
+	@return $result;
+}
+
+// Gera as classes de grid
+@for $i from 1 through $cols {
+	.grid-#{$i} {
+		width: grid($i);
+	}
+}
+
+// Mixin estrutura do grid
+@mixin grid-structure {
+	float: left;
+	min-height: 1px;
+	margin-left: calc($gutter / 2);
+	margin-right: calc($gutter / 2);
+	@include device(mobile) {
+		width: 100%;
+		float: none;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+[class^="grid-"] {
+	@include grid-structure;
+}
+
+// Gera as classes de offset
+@for $i from 1 through $cols {
+	.offset-#{$i} {
+		margin-left: grid($i, offset);
+		@extend %offset;
+	}
+}
+
+@include device(mobile) {
+	%offset {
+		margin-left: 0px;
+	}
+}
+
+// Mixin de clearfix
+@mixin clearfix {
+	&::after, &::before {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+//Mixin do container
+@mixin container {
+	max-width: $device_large;
+	margin: 0px auto;
+	position: relative;
+	@include device(tablet) {
+		max-width: $device_medium;
+	}
+	@include device(mobile) {
+		max-width: $device_small;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	@include clearfix;
+}
+
+.container {
+	@include container;
+}
+
+@mixin row {
+	position: relative;
+	margin-left: calc(-1 * $gutter / 2);
+	margin-right: calc(-1 * $gutter / 2);
+	@include device(mobile) {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	@include clearfix;
+}
+
+.row {
+	@include row;
+}
