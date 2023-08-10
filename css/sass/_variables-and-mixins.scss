@@ -1,0 +1,56 @@
+// Cores
+$primary-color: #141C24;
+$secondary-color: #1A75FF;
+$light-color: #202B37;
+$border-button: #637083;
+$border-footer: #344051;
+$bg-badge: #F0F6FF;
+$text-badge: #0052CC;
+$text-color: #fff;
+
+// Fonte
+$font: 'Inter', sans-serif;
+
+@function em($pixel, $context: 16) {
+	@return calc($pixel / $context + em);
+}
+
+@mixin font($size) {
+	font-family: $font;
+	@if $size == 60 {
+		font-size: em(60);
+		line-height: em(30, 60);
+	}
+    @else if $size == 48 {
+		font-size: em(48);
+		line-height: em(30, 48);
+	}
+    @else if $size == 36 {
+		font-size: em(36);
+		line-height: em(30, 36);
+	}
+    @else if $size == 28 {
+		font-size: em(28);
+		line-height: em(30, 28);
+	}
+    @else if $size == 24 {
+		font-size: em(24);
+		line-height: em(30, 24);
+	}
+    @else if $size == 20 {
+		font-size: em(20);
+		line-height: em(30, 20);
+	}
+    @else if $size == 18 {
+		font-size: em(18);
+		line-height: em(30, 18);
+	}
+    @else if $size == 16 {
+		font-size: em(16);
+		line-height: em(30, 16);
+	}
+    @else if $size == 14 {
+		font-size: em(14);
+		line-height: em(30, 14);
+	}
+}
