@@ -1,0 +1,27 @@
+.features-body{
+    padding-top: 80px;
+    margin: 0px 10px 16px 10px;
+
+    .features-cards{ 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .features-card{
+            flex: 1 1 360px;
+            padding: 0px 25px 64px 0px;
+    
+            h3{
+                @include font(20);
+                font-weight: 600;
+                padding: 16px 0px 8px 0px;
+            }
+    
+            p{
+                @include font(16);
+                font-weight: 400;
+                text-align: left;
+            }
+        }
+    }
+}

@@ -13,7 +13,7 @@ $device_small: 480px;
 // Mixin de media-queries
 @mixin device($size) {
 	@if $size == desktop {
-		@media screen and (min-width: #{$device_large}) {
+		@media screen and (max-width: #{$device_large}) {
 			@content;
 		}
 	}
