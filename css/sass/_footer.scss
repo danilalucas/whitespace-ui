@@ -1,0 +1,76 @@
+.footer-content {
+    margin: 0 auto;
+    padding: 40px 0px 32px 0px;
+
+    h3{
+        @include font(18);
+        font-weight: 600;
+    }
+
+    a{
+        @include font(16);
+        font-weight: 500;
+    }
+
+    .products, .company, .suport{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        @include device(mobile){
+            padding: 0px 10px 30px 20px;
+        }
+    }
+
+    .follow-us{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        @include device(mobile){
+            padding: 0px 20px ;
+        }
+
+        .social-media{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 16px;
+
+            .apps{
+                display: flex;
+                gap: 16px;
+                @include device(tablet){
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+.copywriting{
+    border-top: 1px solid $border-footer;
+    padding: 32px 10px;
+    @include device(mobile){
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    img{
+        float: left;
+    }
+
+    p{
+        @include font(16);
+        font-weight: 400;
+        float: right;
+        @include device(mobile){
+            padding-top: 10px;
+            text-align: center;
+        }
+    }
+}

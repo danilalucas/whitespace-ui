@@ -11,246 +11,451 @@
 </head>
 <body>
 
-    <header>
-        <div class="header container">
-            <div class="grid-7 header_logo">
-                <a href="#home"><img src="./image/logo.png" alt="logo"></a>
+    <header class="header">
+        <div class="header-menu">
+            <div class="header-logo">
+                <a href="#home" id="logo-desktop"><img src="./image/logo/logo.png" alt="logo"></a>
+                <a href="#home" id="logo-tablet"><img src="./image/logo/logo-mobile.png" alt="logo"></a>
+                <a href="#home" id="logo-mobile"><img src="./image/logo/icon-logo.png" alt="logo"></a>
             </div>
-            <div class="grid-5 header_menu">
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#resources">Recursos</a></li>
-                        <li><a href="#plans">Planos</a></li>
-                        <li class="button"><a class="btn-hot" href="#">Comece agora</a></li>
-                    </ul>
-                    </div>
-                </nav>
-            </div>
+            <nav class="nav-menu">
+                <button type="button" aria-label="abrir menu" id="menu-hamburguer" aria-haspopup="true" aria-controls="menu" aria-expanded="false"><img id="img-menu-hamburguer" src="./image/menu/menu-mobile.png" alt="menu"></button>
+                <ul id="menu" role="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#resources">Recursos</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#plans">Planos</a></li>
+                </ul>
+                <a href="#plans" id="btn-menu">Comece agora</a>
+            </nav>
         </div>
     </header>
 
     <main class="home" id="home">
-        <div class="banner container">
-            <div class="grid-5 banner_image">
-                <img src="./image/banner-principal.png" alt="banner-principal">
+        <div class="container banner">
+            <div class="grid-6 banner-image">
+                <img src="./image/banner-principal.png" alt="banner principal">
             </div>
-            <div class="grid-7 banner_description">
+            <div class="grid-6 banner-description">
                 <h1>Transforme sua empresa hoje</h1>
                 <p>Nossas soluções SaaS de ponta são projetadas para ajudá-lo a levar seus negócios para o próximo nível.</p>
-                <button type="button">Comece seu teste gratuito de 14 dias</button>
+                <button type="button"><a href="#plans">Comece seu teste gratuito de 14 dias</a> <img src="./image/arrow-up.png" alt="ver planos"></button>
             </div>
         </div>
     </main>
 
-    <section class="features" id="features">
-        <div class="container">
-            <div class="grid-12 features_title">
+    <section class="resources" id="resources">
+        <div class="container resources-body">
+            <div class="resources-title">
                 <span class="badge">Nossos recursos</span>
                 <h2>Nossos principais benefícios</h2>
                 <p>Nossos serviços são projetados para atender às suas necessidades e objetivos específicos</p>
             </div>
-        </div>
-        <div class="container">
-            <div class="feature_card">
-                <div class="grid-6 feature_description">
-                    <img src="./image/icons/graphic.png" alt="graficos">
-                    <h2>Estrutura do Projeto</h2>
+            <div class="resources-card">
+                <div class="grid-6 resources-description">
+                    <img src="./image/resources/graphic.png" alt="grafico">
+                    <h2><span class="img-border">Estrutura do Projeto</span></h2>
                     <p>Confira nossos métodos, guias e exercícios comprovados que ajudam a tornar o trabalho melhor e as pessoas mais felizes.</p>
                     <ul>
-                        <li><img src="./image/icons/projects.png" alt="projetos"><span>Controle seus projetos</span></li>
-                        <li><img src="./image/icons/time.png" alt="tempo"><span>Acompanhe seu tempo</span></li>
-                        <li><img src="./image/icons/finance.png" alt="financeiro"><span>Analise financeira</span></li>
-                        <li><img src="./image/icons/team.png" alt="equipe"><span>Ótimo para trabalho em equipe</span></li>
-                    <a href="#">Descubra mais <img src="./image/icons/arrow.png" alt="seta"> </a>
+                        <li><img src="./image/resources/projects.png" alt="projeto"><span>Controle seus projetos</span></li>
+                        <li><img src="./image/resources/time.png" alt="tempo"><span>Acompanhe seu tempo</span></li>
+                        <li><img src="./image/resources/finance.png" alt="financeiro"><span>Analise financeira</span></li>
+                        <li><img src="./image/resources/team.png" alt="equipe"><span>Ótimo para trabalho em equipe</span></li>
+                    </ul>
+                    <a href="#features"> Descubra mais <img src="./image/resources/arrow.png" alt="ver mais recursos"> </a>
                 </div>
-                <div class="grid-5 offset-1 feature_image">
-                    <img src="./image/mockups.png" alt="ilustracao-sec2">
+                <div class="grid-5 offset-1 resources-image">
+                    <img src="./image/resources/mockups.png" alt="demostrativo estrutura do projeto">
                 </div>
             </div>
-            <div class="feature_card">
-                <div class="grid-5 feature_image">
-                    <img src="./image/mockups.png" alt="ilustracao-sec1">
+            <div class="resources-card double">
+                <div class="grid-5 resources-image">
+                    <img src="./image/resources/mockups.png" alt="demostrativo estrutura do projeto">
                 </div>
-                <div class="grid-6 offset-1 feature_description">
-                    <img src="./image/icons/graphic.png" alt="graficos">
-                    <h2>Estrutura do Projeto</h2>
+                <div class="grid-6 offset-1 resources-description">
+                    <img src="./image/resources/graphic.png" alt="grafico">
+                    <h2><span class="img-border">Estrutura do Projeto</span></h2>
                     <p>Confira nossos métodos, guias e exercícios comprovados que ajudam a tornar o trabalho melhor e as pessoas mais felizes.</p>
                     <ul>
-                        <li><img src="./image/icons/projects.png" alt="projetos"><span>Controle seus projetos</span></li>
-                        <li><img src="./image/icons/time.png" alt="tempo"><span>Acompanhe seu tempo</span></li>
-                        <li><img src="./image/icons/finance.png" alt="financeiro"><span>Analise financeira</span></li>
-                        <li><img src="./image/icons/team.png" alt="equipe"><span>Ótimo para trabalho em equipe</span></li>
+                        <li><img src="./image/resources/projects.png" alt="projeto"><span>Controle seus projetos</span></li>
+                        <li><img src="./image/resources/time.png" alt="tempo"><span>Acompanhe seu tempo</span></li>
+                        <li><img src="./image/resources/finance.png" alt="financeiro"><span>Analise financeira</span></li>
+                        <li><img src="./image/resources/team.png" alt="equipe"><span>Ótimo para trabalho em equipe</span></li>
                     </ul>
-                    <a href="#">Descubra mais <img src="./image/icons/arrow.png" alt="seta"> </a>
+                    <a href="#features"> Descubra mais <img src="./image/resources/arrow.png" alt="ver mais recursos"> </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="resources" id="resources">
-        <div class="container resources_cards">
-            <div class="grid-4 resources_card">
-                <img src="./image/resources/project-structure.png" alt="projeto">
-                <div class="resources_card_description">
-                    <h3>Estrutura do Projeto</h3>
-                    <p>Confira nossos métodos, guias e exercícios comprovados que ajudam a tornar o trabalho melhor e as pessoas mais felizes.</p>
+    <section class="features" id="features">
+        <div class="features-body">
+            <div class="container features-cards">
+                <div class="grid-4 features-card">
+                    <img src="./image/features/project-structure.png" alt="projeto">
+                    <div class="features-description">
+                        <h3>Estrutura do Projeto</h3>
+                        <p>Confira nossos métodos, guias e exercícios comprovados que ajudam a tornar o trabalho melhor e as pessoas mais felizes.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="grid-4 resources_card">
-                <img src="./image/resources/responsive.png" alt="responsivo">
-                <h3>Responsivo</h3>
-                <p>Este kit de sistema de design e interface do usuário vem com telas totalmente responsivas para tablets e dispositivos móveis.</p>
-            </div>
-            <div class="grid-4 resources_card">
-                <img src="./image/resources/messages.png" alt="mensagens">
-                <h3>Mensagens</h3>
-                <p>No celular, os clientes podem enviar mensagens de texto ou áudio para os agentes, usando qualquer aplicativo de mensagens</p>
-            </div>
-            <div class="grid-4 resources_card">
-                <img src="./image/resources/members.png" alt="membros">
-                <h3>Membros</h3>
-                <p>Usuários convidados a trabalhar juntos com o objetivo comum de entregar um projeto de sucesso. Eles podem ter vários papéis diferentes como membros ativos.</p>
-            </div>
-            <div class="grid-4 resources_card">
-                <img src="./image/resources/location.png" alt="localização">
-                <h3>Localização</h3>
-                <p>Obtenha informações de localização com visualização de mapa para que você possa ter uma ideia melhor do local.</p>
-            </div>
-            <div class="grid-4 resources_card">
-                <img src="./image/resources/and-more.png" alt="mais">
-                <h3>E mais</h3>
-                <p>Gerencie vários dispositivos, convide outros usuários para monitorar o mesmo dispositivo, limpe os dados a qualquer hora e em qualquer lugar que você esteja.</p>
+                <div class="grid-4 features-card">
+                    <img src="./image/features/responsive.png" alt="responsivo">
+                    <h3>Responsivo</h3>
+                    <p>Este kit de sistema de design e interface do usuário vem com telas totalmente responsivas para tablets e dispositivos móveis.</p>
+                </div>
+                <div class="grid-4 features-card">
+                    <img src="./image/features/messages.png" alt="mensagens">
+                    <h3>Mensagens</h3>
+                    <p>No celular, os clientes podem enviar mensagens de texto ou áudio para os agentes, usando qualquer aplicativo de mensagens</p>
+                </div>
+                <div class="grid-4 features-card">
+                    <img src="./image/features/members.png" alt="membros">
+                    <h3>Membros</h3>
+                    <p>Usuários convidados a trabalhar juntos com o objetivo comum de entregar um projeto de sucesso. Eles podem ter vários papéis diferentes como membros ativos.</p>
+                </div>
+                <div class="grid-4 features-card">
+                    <img src="./image/features/location.png" alt="localização">
+                    <h3>Localização</h3>
+                    <p>Obtenha informações de localização com visualização de mapa para que você possa ter uma ideia melhor do local.</p>
+                </div>
+                <div class="grid-4 features-card">
+                    <img src="./image/features/and-more.png" alt="mais">
+                    <h3>E mais</h3>
+                    <p>Gerencie vários dispositivos, convide outros usuários para monitorar o mesmo dispositivo, limpe os dados a qualquer hora e em qualquer lugar que você esteja.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="depoiment" id="depoiment">
-        <div class="container depoiment_card">
-            <div class="grid-2 depoiment_profile">
-                <div class="depoiment_profile_img">
+        <div class="depoiment-body">
+            <div class="container depoiment-card">
+                <div class="grid-2 depoiment-profile">
                     <img src="./image/depoiment/avatar.png" alt="avatar">
                 </div>
-            </div>
-            <div class="grid-10 depoiment_description">
-                <h3>“O processo simplificado e a linguagem de design consistente elevou nossa marca e nos poupou muito tempo.”</h3>
-                <p>Jenny Wilson</p>
-                <p>Senior UX Designer, Whitespace UI</p>
+                <div class="grid-10 depoiment-description">
+                    <h3>“O processo simplificado e a linguagem de design consistente elevou nossa marca e nos poupou muito tempo.”</h3>
+                    <p class="person-name">Jenny Wilson</p>
+                    <p>Senior UX Designer, Whitespace UI</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="plans" id="plans">
-        <div class="container">
-            <div class="grid-12 plans_title">
+        <div class="container plans-body">
+            <div class="grid-12 plans-title">
                 <span class="badge">Preços</span>
                 <h2>Soluções de preços sob medida</h2>
-                <div class="plans_info">
-                    <a href="#">Mensal</a>
-                    <a href="#">Anual</a>
+                <div class="plans-info">
+                    <button type="button" id="monthly" class="button-plans-active">Mensal</button>
+                    <button type="button" id="annual">Anual</button>
                 </div>
             </div>
-        </div>
-        <div class="container plans_description">
-            <div class="grid-4 plans_free">
-                <img src="./image/plans/free.png" alt="free">
-                <h3>Free</h3>
-                <p>Completamente gratuito por 30 dias, todos os recursos são gratuitos para que você possa se exercitar com precisão se for para você.</p>
-                <h2>R$ 0</h2>
-                <p>Ilimitado</p>
-                <ul>
-                    <li><img src="./image/plans/checked.png"><span>Até 5 usuários</span><img src="./image/plans/info.png"></li>
-                    <li><img src="./image/plans/checked.png"><span>Armazenamento em nuvem de 25 GB</span><img src="./image/plans/info.png"></li>
-                    <li><img src="./image/plans/checked.png"><span>50 GB de memória</span><img src="./image/plans/info.png"></li>                    
-                    <li><img src="./image/plans/checked.png"><span>Domínio gratuito</span><img src="./image/plans/info.png"></li>                    
-                    <li><img src="./image/plans/unchecked.png"><span>Certificado SSL</span><img src="./image/plans/info.png"></li>                   
-                    <li><img src="./image/plans/unchecked.png"><span>Suporte via chat 24/7</span><img src="./image/plans/info.png"></li>
-                </ul>
-                <button type="button">Iniciar</button><br>
-                <button type="button">Ver todos os recursos</button>
-            </div>
-            <div class="grid-4 plans_premium">
-                <img src="./image/plans/premium.png" alt="free">
-                <span class="badge">Mais popular</span>
-                <h3>Premium</h3>
-                <p>Completamente gratuito por 30 dias, todos os recursos são gratuitos para que você possa se exercitar com precisão se for para você.</p>
-                <h2>R$ 79</h2>
-                <p>Ilimitado</p>
-                <ul>
-                    <li><img src="./image/plans/checked.png"><span>Até 5 usuários</span><img src="./image/plans/info.png"></li>
-                    <li><img src="./image/plans/checked.png"><span>Armazenamento em nuvem de 25 GB</span><img src="./image/plans/info.png"></li>
-                    <li><img src="./image/plans/checked.png"><span>50 GB de memória</span><img src="./image/plans/info.png"></li>                    
-                    <li><img src="./image/plans/checked.png"><span>Domínio gratuito</span><img src="./image/plans/info.png"></li>                    
-                    <li><img src="./image/plans/checked.png"><span>Certificado SSL</span><img src="./image/plans/info.png"></li>                   
-                    <li><img src="./image/plans/unchecked.png"><span>Suporte via chat 24/7</span><img src="./image/plans/info.png"></li>
-                </ul>
-                <button type="button">Iniciar</button><br>
-                <button type="button">Ver todos os recursos</button>
-            </div>
-            <div class="grid-4 plans_enterprise">
-                <img src="./image/plans/enterprice.png" alt="free">
-                <h3>Enterprise</h3>
-                <p>Completamente gratuito por 30 dias, todos os recursos são gratuitos para que você possa se exercitar com precisão se for para você.</p>
-                <h2>R$ 199</h2>
-                <p>Ilimitado</p>
-                <ul>
-                    <li><img src="./image/plans/checked.png"><span>Até 5 usuários</span><img src="./image/plans/info.png"></li>
-                    <li><img src="./image/plans/checked.png"><span>Armazenamento em nuvem de 25 GB</span><img src="./image/plans/info.png"></li>
-                    <li><img src="./image/plans/checked.png"><span>50 GB de memória</span><img src="./image/plans/info.png"></li>                    
-                    <li><img src="./image/plans/checked.png"><span>Domínio gratuito</span><img src="./image/plans/info.png"></li>                    
-                    <li><img src="./image/plans/checked.png"><span>Certificado SSL</span><img src="./image/plans/info.png"></li>                   
-                    <li><img src="./image/plans/checked.png"><span>Suporte via chat 24/7</span><img src="./image/plans/info.png"></li>
-                </ul>
-                <button type="button">Iniciar</button><br>
-                <button type="button">Ver todos os recursos</button>
+            <div class="plans-description">
+                <div class="plans-monthly opacity-total">
+                    <div class="grid-4 plans-free">
+                        <img src="./image/plans/free.png" alt="plano free">
+                        <h3>Free</h3>
+                        <p>Completamente gratuito por 30 dias, todos os recursos são gratuitos para que você possa se exercitar com precisão se for para você.</p>
+                        <h2>R$ 0</h2>
+                        <p class="period">Ilimitado</p>
+                        <ul>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Até 5 usuários</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li><img src="./image/plans/checked.png" alt="incluso">
+                                <span>Armazenamento em nuvem de 25 GB</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>50 GB de memória</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Domínio gratuito</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/unchecked.png" alt="não incluso">
+                                <span>Certificado SSL</span>
+                                <img src="./image/plans/info.png">
+                            </li>                   
+                            <li>
+                                <img src="./image/plans/unchecked.png" alt="não incluso">
+                                <span>Suporte via chat 24/7</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                        </ul>
+                        <button type="button" class="active">Iniciar</button><br>
+                        <button type="button">Ver todos os recursos</button>
+                    </div>
+                    <div class="grid-4 plans-premium">
+                        <img src="./image/plans/premium.png" alt="plano premium">
+                        <div class="most-popular">
+                            <h3>Premium</h3>
+                            <span class="badge">Mais popular</span>
+                        </div>
+                        <p>Completamente gratuito por 30 dias, todos os recursos são gratuitos para que você possa se exercitar com precisão se for para você.</p>
+                        <h2>R$ 79</h2>
+                        <p class="period">Ilimitado</p>
+                        <ul>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Até 5 usuários</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Armazenamento em nuvem de 25 GB</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>50 GB de memória</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Domínio gratuito</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Certificado SSL</span>
+                                <img src="./image/plans/info.png">
+                            </li>                   
+                            <li>
+                                <img src="./image/plans/unchecked.png" alt="não incluso">
+                                <span>Suporte via chat 24/7</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                        </ul>
+                        <button type="button" class="active">Iniciar</button><br>
+                        <button type="button">Ver todos os recursos</button>
+                    </div>
+                    <div class="grid-4 plans-enterprise">
+                        <img src="./image/plans/enterprice.png" alt="plano enterprise">
+                        <h3>Enterprise</h3>
+                        <p>Completamente gratuito por 30 dias, todos os recursos são gratuitos para que você possa se exercitar com precisão se for para você.</p>
+                        <h2>R$ 199</h2>
+                        <p class="period">Ilimitado</p>
+                        <ul>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Até 5 usuários</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Armazenamento em nuvem de 25 GB</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>50 GB de memória</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Domínio gratuito</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Certificado SSL</span>
+                                <img src="./image/plans/info.png">
+                            </li>                   
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Suporte via chat 24/7</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                        </ul>
+                        <button type="button" class="active">Iniciar</button><br>
+                        <button type="button">Ver todos os recursos</button>
+                    </div>
+                </div>
+                <div class="plans-annual opacity-medium">
+                    <div class="grid-4 plans-free">
+                        <img src="./image/plans/free.png" alt="plano free">
+                        <h3>Free</h3>
+                        <p>Completamente gratuito por 30 dias, todos os recursos são gratuitos para que você possa se exercitar com precisão se for para você.</p>
+                        <h2>R$ 0</h2>
+                        <p class="period">Ilimitado</p>
+                        <ul>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Até 5 usuários</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li><img src="./image/plans/checked.png" alt="incluso">
+                                <span>Armazenamento em nuvem de 25 GB</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>50 GB de memória</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Domínio gratuito</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/unchecked.png" alt="não incluso">
+                                <span>Certificado SSL</span>
+                                <img src="./image/plans/info.png">
+                            </li>                   
+                            <li>
+                                <img src="./image/plans/unchecked.png" alt="não incluso">
+                                <span>Suporte via chat 24/7</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                        </ul>
+                        <button type="button" class="active">Iniciar</button><br>
+                        <button type="button">Ver todos os recursos</button>
+                    </div>
+                    <div class="grid-4 plans-premium">
+                        <img src="./image/plans/premium.png" alt="plano premium">
+                        <div class="most-popular">
+                            <h3>Premium</h3>
+                            <span class="badge">Mais popular</span>
+                        </div>
+                        <p>Completamente gratuito por 30 dias, todos os recursos são gratuitos para que você possa se exercitar com precisão se for para você.</p>
+                        <h2>R$ 853</h2>
+                        <p class="period">10% OFF - Ilimitado</p>
+                        <ul>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Até 5 usuários</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Armazenamento em nuvem de 25 GB</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>50 GB de memória</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Domínio gratuito</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Certificado SSL</span>
+                                <img src="./image/plans/info.png">
+                            </li>                   
+                            <li>
+                                <img src="./image/plans/unchecked.png" alt="não incluso">
+                                <span>Suporte via chat 24/7</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                        </ul>
+                        <button type="button" class="active">Iniciar</button><br>
+                        <button type="button">Ver todos os recursos</button>
+                    </div>
+                    <div class="grid-4 plans-enterprise">
+                        <img src="./image/plans/enterprice.png" alt="plano enterprise">
+                        <h3>Enterprise</h3>
+                        <p>Completamente gratuito por 30 dias, todos os recursos são gratuitos para que você possa se exercitar com precisão se for para você.</p>
+                        <h2>R$ 2.149</h2>
+                        <p class="period">10% OFF - Ilimitado</p>
+                        <ul>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Até 5 usuários</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Armazenamento em nuvem de 25 GB</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>50 GB de memória</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Domínio gratuito</span>
+                                <img src="./image/plans/info.png">
+                            </li>                    
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Certificado SSL</span>
+                                <img src="./image/plans/info.png">
+                            </li>                   
+                            <li>
+                                <img src="./image/plans/checked.png" alt="incluso">
+                                <span>Suporte via chat 24/7</span>
+                                <img src="./image/plans/info.png">
+                            </li>
+                        </ul>
+                        <button type="button" class="active">Iniciar</button><br>
+                        <button type="button">Ver todos os recursos</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer id="footer">
-        <div class="container footer_content">
+        <div class="container footer-content">
             <div class="grid-3 products">
                 <h3>Produtos</h3>
-                <a href="#">Preços</a><br>
-                <a href="#">Estudos de caso</a><br>
-                <a href="#">Features</a><br>   
-                <a href="#">Avaliações</a><br>       
-                <a href="#">Atualizações </a><br>      
+                <a href="#">Preços</a>
+                <a href="#">Estudos de caso</a>
+                <a href="#">Features</a> 
+                <a href="#">Avaliações</a>      
+                <a href="#">Atualizações </a>   
             </div>
             <div class="grid-3 company">
                 <h3>Empresa</h3>
-                <a href="#">Sobre</a><br>
-                <a href="#">Carreiras</a><br>
-                <a href="#">Notícias</a><br>            
-                <a href="#">Blog</a><br>     
-                <a href="#">Contato</a><br>
+                <a href="#">Sobre</a>
+                <a href="#">Carreiras</a>
+                <a href="#">Notícias</a>            
+                <a href="#">Blog</a>     
+                <a href="#">Contato</a>
             </div>
             <div class="grid-3 suport">
                 <h3>Suporte</h3>
-                <a href="#">Cental de ajuda</a><br>
-                <a href="#">Status</a><br>
-                <a href="#">Reportar um erro</a><br>         
-                <a href="#">Suporte via chat</a><br>            
+                <a href="#">Cental de ajuda</a>
+                <a href="#">Status</a>
+                <a href="#">Reportar um erro</a>         
+                <a href="#">Suporte via chat</a>            
             </div>
-            <div class="grid-3 social_media">
+            <div class="grid-3 follow-us">
                 <h3>Siga-nos</h3>
-                <a href=#><img src="./image/social-media/instagram.png" alt="instagram"></a>
-                <a href=#><img src="./image/social-media/facebook.png" alt="facebook"></a>
-                <a href=#><img src="./image/social-media/twitter.png" alt="twitter"></a>
-                <a href=#><img src="./image/social-media/linkedin.png" alt="linkedin"></a><br>
-                <a href=#><img src="./image/social-media/mobile-app-google-play.png" alt="aplicativo"></a>
-                <a href=#><img src="./image/social-media/mobile-app-app-store.png" alt="aplicativo"></a>
+                <ul class="social-media">
+                    <li><a href=#><img src="./image/social-media/instagram.png" alt="instagram"></a></li>
+                    <li><a href=#><img src="./image/social-media/facebook.png" alt="facebook"></a></li>
+                    <li><a href=#><img src="./image/social-media/twitter.png" alt="twitter"></a></li>
+                    <li><a href=#><img src="./image/social-media/linkedin.png" alt="linkedin"></a></li>
+                    <span class="apps">
+                        <li><a href=#><img src="./image/social-media/mobile-app-google-play.png" alt="aplicativo google play store"></a></li>
+                        <li><a href=#><img src="./image/social-media/mobile-app-app-store.png" alt="aplicativo apple store"></a></li>
+                    </span>
+                </ul>
             </div>
         </div>
         <div class="container copywriting">
-            <div class="grid-7">
-                <img src="./image/logo-footer.png" alt="logo">
-            </div>
-            <div class="grid-5">
-                <p> &copy; 2023 Whitespace UI - Todos os direitos reservados</p>
-            </div>
+            <img src="./image/logo/icon-logo.png" alt="logo">
+            <p> &copy; 2023 Whitespace UI - Todos os direitos reservados</p>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
+    <script src="./js/plans.js"></script>
 </body>
 </html>

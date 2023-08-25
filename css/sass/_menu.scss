@@ -1,0 +1,137 @@
+.header{
+    @include device(desktop){
+        z-index: 1000;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        max-width: 100%;
+    }
+}
+
+.header-menu{
+    z-index: 99;
+    position: relative;
+    max-width: 1150px;
+    background-color: transparent;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 18px 0px;
+    @include device(desktop){
+        background-color: $light-color;
+        padding: 18px 10px 18px 0px;   
+    }
+
+    .header-logo{
+        margin: 0px 10px;
+    }
+
+    #logo-desktop{
+        display: flex;
+        @include device(desktop){
+            display: none;
+        }
+    }
+
+    #logo-tablet{
+        display: none;
+        @include device(tablet){
+            display: block;
+        }
+    }
+
+    #logo-mobile{
+        display: none;
+        @include device(mobile){
+            display: block;
+        }
+    }
+
+    #menu-hamburguer{
+        display: none;
+        cursor: pointer;
+        background-color: transparent;
+        @include device(desktop){
+            display: block;
+        }
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        @include device(desktop){
+            flex-direction: row-reverse;
+        }
+
+        .active {
+            height: calc(100vh - 80px);
+            visibility: visible;
+            overflow-y: auto;
+            display: block;
+        }
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 24px;
+            @include device(desktop){
+                position: absolute;
+                width: 100%;
+                top: 80px;
+                right: 0px;
+                background-color: $light-color;
+                display: block;
+                z-index: 100;
+                height: 0px;
+                visibility: hidden;
+                overflow-y: hidden;
+                transition: 0.5s ease;
+            }
+
+            li{
+                @include device(desktop){
+                    margin-bottom: 10px;
+                }
+            }
+
+            a{
+                display: block;
+                @include font(16);
+                font-weight: 500;
+                color: $text-color;
+                padding: 8px;
+                transition: 0.5s ease;
+                @include device(desktop){
+                    padding: 10px 20px;
+                    margin: 0 20px;
+                    border-left: 2px solid $secondary-color;
+                }
+
+                &:hover, &:focus{
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        #btn-menu{
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: $secondary-color;
+            color: $text-color;
+            @include font(14);
+            font-weight: 600;
+            transition: 0.5s ease;
+
+            &:hover{
+                background-color: $primary-color;
+            }
+        }
+    }
+
+}
